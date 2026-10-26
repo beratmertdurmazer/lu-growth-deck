@@ -272,16 +272,16 @@ body {
   font-size: 0.92rem;
 }
 
-.error-list li {
+.neutral-list li {
   color: #475569;
   position: relative;
   padding-left: 1.4rem;
 }
 
-.error-list li::before {
-  content: "✕";
-  color: #EF4444;
-  font-weight: 800;
+.neutral-list li::before {
+  content: "—";
+  color: #94A3B8;
+  font-weight: 700;
   position: absolute;
   left: 0;
 }
