@@ -375,45 +375,38 @@ body {
   display: inline-block;
 }
 
-/* AI VIDEO FORMAT HEADERS */
-.video-format-header {
-  margin-bottom: 1.1rem;
-}
-
-.format-badge {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--primary-accent);
-  background: var(--primary-soft);
-  padding: 0.25rem 0.65rem;
-  border-radius: 12px;
-  display: inline-block;
-  margin-bottom: 0.35rem;
-}
-
-.video-format-header h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-/* AI VIDEO: 2 DİKEY VİDEO YAN YANA */
-.vertical-videos-pair {
+/* AI ASYMMETRIC BENTO: 1 DİKEY (SOL) + 2 YATAY (SAĞ) */
+.ai-media-bento {
   display: grid;
-  grid-template-columns: repeat(2, 380px);
-  justify-content: center;
+  grid-template-columns: 350px 1fr;
   gap: 2rem;
-  margin-bottom: 2rem;
+  align-items: start;
 }
 
-/* AI VIDEO: 2 YATAY VİDEO YAN YANA */
-.horizontal-videos-pair {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.8rem;
-  margin-bottom: 2rem;
+.bento-vertical-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-horizontal-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.horizontal-video-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--bg-page);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
 }
 
 .horizontal-ratio {
@@ -765,11 +758,14 @@ body {
   .services-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .vertical-videos-pair, .horizontal-videos-pair {
+  .ai-media-bento {
     grid-template-columns: 1fr;
-    max-width: 480px;
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .bento-vertical-col .vertical-ratio {
+    max-height: 480px;
   }
   .main-title {
     font-size: 2rem;
@@ -795,12 +791,8 @@ body {
   .card, .service-card, .app-card, .cta-banner {
     padding: 1.25rem;
   }
-  .vertical-videos-pair, .horizontal-videos-pair {
+  .ai-media-bento {
     grid-template-columns: 1fr;
     max-width: 100%;
-  }
-  .upcoming-horizontal-card {
-    flex-direction: column;
-    text-align: center;
   }
 }
