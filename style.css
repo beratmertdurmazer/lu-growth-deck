@@ -375,12 +375,13 @@ body {
   display: inline-block;
 }
 
-/* AI VIDEO SHOWCASE */
-.video-showcase {
+/* AI VIDEO: 2 DİKEY VİDEO YAN YANA */
+.vertical-videos-pair {
   display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 1.8rem;
-  align-items: start;
+  grid-template-columns: repeat(2, 380px);
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .video-box-wrap {
@@ -392,47 +393,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.6rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .video-section-label {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
   color: var(--text-main);
 }
 
-.video-pill-tabs {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.pill-btn {
-  background: #E2E8F0;
-  border: none;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #475569;
-  padding: 0.25rem 0.65rem;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.pill-btn:hover {
-  background: #CBD5E1;
-  color: var(--text-main);
-}
-
-.pill-btn.active {
-  background: var(--primary-accent);
-  color: #FFF;
-}
-
 .video-card {
   background: #090D16;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid #1E293B;
   display: flex;
   flex-direction: column;
@@ -440,19 +412,12 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.16);
 }
 
 .vertical-ratio {
   aspect-ratio: 9 / 16;
   width: 100%;
-  max-height: 520px;
-}
-
-.horizontal-ratio {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  max-height: 420px;
 }
 
 .media-video {
@@ -464,16 +429,11 @@ body {
   background: #000;
 }
 
-.horizontal-video-elem {
-  object-fit: contain;
-  background: #05070C;
-}
-
 .badge-tech {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(2, 132, 199, 0.85);
+  top: 14px;
+  right: 14px;
+  background: rgba(2, 132, 199, 0.9);
   backdrop-filter: blur(8px);
   color: #FFF;
   font-size: 0.68rem;
@@ -483,22 +443,6 @@ body {
   text-transform: uppercase;
   z-index: 10;
   pointer-events: none;
-}
-
-.overlay-hint {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(6px);
-  color: #CBD5E1;
-  font-size: 0.72rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 8px;
-  text-align: center;
-  pointer-events: none;
-  z-index: 10;
 }
 
 .video-meta {
@@ -514,6 +458,54 @@ body {
 .video-meta p {
   font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+/* YATAY VİDEO BİLGİLENDİRME KUTUSU */
+.upcoming-horizontal-card {
+  background: var(--surface);
+  border: 1px dashed #CBD5E1;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.upcoming-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.upcoming-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #F1F5F9;
+  color: #64748B;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}
+
+.upcoming-icon {
+  font-size: 1.8rem;
+}
+
+.upcoming-text h4 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: var(--text-main);
+}
+
+.upcoming-text p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
 }
 
 /* APP 2.0 LIVING CARDS */
@@ -736,11 +728,11 @@ body {
   .services-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .video-showcase {
+  .vertical-videos-pair {
     grid-template-columns: 1fr;
-  }
-  .vertical-ratio {
-    max-height: 480px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .main-title {
     font-size: 2rem;
@@ -766,7 +758,12 @@ body {
   .card, .service-card, .app-card, .cta-banner {
     padding: 1.25rem;
   }
-  .vertical-ratio {
-    max-height: 420px;
+  .vertical-videos-pair {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .upcoming-horizontal-card {
+    flex-direction: column;
+    text-align: center;
   }
 }
