@@ -1,18 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Video placeholder feedback
-  const videoSlot1 = document.getElementById('videoSlot1');
-  const videoSlot2 = document.getElementById('videoSlot2');
+  // Video switcher tabs for Vertical Reels
+  const pillBtns = document.querySelectorAll('.pill-btn');
+  const vplayer1 = document.getElementById('vplayer1');
+  const vmetaTitle1 = document.getElementById('vmetaTitle1');
+  const vmetaDesc1 = document.getElementById('vmetaDesc1');
 
-  function handleVideoPlaceholderClick(slotName) {
-    alert(`${slotName} için video dosyasını sağladığında buraya otomatik yerleştirilecek.`);
-  }
+  pillBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      pillBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
 
-  if (videoSlot1) {
-    videoSlot1.addEventListener('click', () => handleVideoPlaceholderClick('Dikey Reels (9:16)'));
-  }
-  if (videoSlot2) {
-    videoSlot2.addEventListener('click', () => handleVideoPlaceholderClick('Sinematik Lansman (16:9)'));
-  }
+      const newSrc = btn.getAttribute('data-src');
+      const newTitle = btn.getAttribute('data-title');
+      const newDesc = btn.getAttribute('data-desc');
+
+      if (vplayer1 && newSrc) {
+        vplayer1.src = newSrc;
+        vplayer1.load();
+        vplayer1.play().catch(() => {});
+      }
+      if (vmetaTitle1 && newTitle) vmetaTitle1.textContent = newTitle;
+      if (vmetaDesc1 && newDesc) vmetaDesc1.textContent = newDesc;
+    });
+  });
 
   // Active navigation highlight on scroll
   const sections = document.querySelectorAll('section[id]');

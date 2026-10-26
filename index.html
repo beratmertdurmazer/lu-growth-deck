@@ -142,7 +142,7 @@
           </div>
         </div>
 
-        <!-- 3. Stratejik Büyüme & Ciro Aklı (Yeni Birleştirilmiş Madde) -->
+        <!-- 3. Stratejik Büyüme & Ciro Aklı -->
         <div class="service-card highlight-card">
           <div class="svc-header">
             <span class="svc-num">03</span>
@@ -204,40 +204,49 @@
       </div>
     </section>
 
-    <!-- 4. AI PRODÜKSİYON VİTRİNİ & VİDEO YER TUTUCULARI -->
+    <!-- 4. AI PRODÜKSİYON VİTRİNİ & CANLI VİDEOLAR -->
     <section class="section" id="ai-produksiyon">
       <div class="section-head">
         <span class="section-tag">AI Creative Lab</span>
         <h2>Yapay Zeka Prodüksiyon Stüdyomuz</h2>
-        <p class="section-sub">Aşağıdaki formatlarda içerikler kendi AI stüdyomuzda ışık hızında üretilir:</p>
+        <p class="section-sub">Aşağıdaki formatlarda içerikler kendi yapay zeka stüdyomuzda üretilmektedir:</p>
       </div>
 
       <div class="video-showcase">
-        <!-- Dikey Video (Reels) -->
+        <!-- 1. DİKEY VİDEO ALANI (9:16) -->
         <div class="video-box-wrap">
-          <div class="video-card vertical-ratio" id="videoSlot1">
-            <div class="play-circle">▶</div>
-            <div class="video-label">Örnek Video 1 (Dikey Reels • 9:16)</div>
-            <div class="video-sublabel">AI Stüdyo Çıktısı Buraya Gelecek</div>
-            <span class="badge-tech">AI Studio</span>
+          <div class="video-switch-bar">
+            <span class="video-section-label">📱 1. Alan: Dikey Reels (9:16)</span>
+            <div class="video-pill-tabs">
+              <button class="pill-btn active" data-src="assets/lu_ai_video_1.mp4" data-target="vplayer1" data-title="Dikey Reels 1 • Doku & İştah" data-desc="Kendi AI stüdyomuzda üretilen akışkan çikolata ve artisanal dondurma doku kurgusu.">Reels 1</button>
+              <button class="pill-btn" data-src="assets/lu_ai_video_2.mp4" data-target="vplayer1" data-title="Dikey Reels 2 • Konsept Reklam" data-desc="Yapay zeka ile üretilmiş dinamik ürün ve şube lansman kurgusu.">Reels 2</button>
+            </div>
+          </div>
+          <div class="video-card vertical-ratio video-active-card">
+            <video id="vplayer1" src="assets/lu_ai_video_1.mp4" playsinline controls loop muted preload="metadata" class="media-video"></video>
+            <span class="badge-tech">AI Studio • Canlı</span>
           </div>
           <div class="video-meta">
-            <h4>Dinamik Instagram Reels / TikTok</h4>
-            <p>Akışkan doku, taze fıstık patlaması, iştah kabartan makro gelato akışı.</p>
+            <h4 id="vmetaTitle1">Dikey Reels 1 • Doku & İştah</h4>
+            <p id="vmetaDesc1">Kendi AI stüdyomuzda üretilen akışkan çikolata ve artisanal dondurma doku kurgusu.</p>
           </div>
         </div>
 
-        <!-- Yatay Video (Sinematik Lansman) -->
+        <!-- 2. YATAY VİDEO ALANI (16:9) -->
         <div class="video-box-wrap wide-wrap">
-          <div class="video-card horizontal-ratio" id="videoSlot2">
-            <div class="play-circle">▶</div>
-            <div class="video-label">Örnek Video 2 (Sinematik Lansman • 16:9)</div>
-            <div class="video-sublabel">AI Stüdyo Çıktısı Buraya Gelecek</div>
-            <span class="badge-tech">AI Studio</span>
+          <div class="video-switch-bar">
+            <span class="video-section-label">🎬 2. Alan: Sinematik Lansman (16:9)</span>
+          </div>
+          <div class="video-card horizontal-ratio video-active-card" id="slotYatay">
+            <video id="vplayer2" src="assets/lu_ai_video_2.mp4" playsinline controls loop muted preload="metadata" class="media-video horizontal-video-elem"></video>
+            <span class="badge-tech">AI Studio • Sinematik</span>
+            <div class="overlay-hint">
+              <span>(Yatay video geldiğinde burası anında güncellenecek)</span>
+            </div>
           </div>
           <div class="video-meta">
-            <h4>Sinematik Marka & Konsept Lansmanı</h4>
-            <p>İtalyan zarafeti, artisanal üretim ve dönemsel kampanya filmleri.</p>
+            <h4>Sinematik Marka & Konsept Filmi</h4>
+            <p>Web sitesi başlığı, YouTube ve yatay ekranlar için geniş açılı sinematik lansman kurgusu.</p>
           </div>
         </div>
       </div>
